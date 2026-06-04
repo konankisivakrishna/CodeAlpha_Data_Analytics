@@ -1,44 +1,40 @@
-# Netflix Content Analysis - Exploratory Data Analysis (EDA)
+# World Happiness Data Visualization
 
 ## Project Overview
-This project performs an Exploratory Data Analysis (EDA) on the Netflix Titles dataset to uncover insights about content distribution, trends over time, and regional availability.
+This project focuses on **Data Visualization** to explore the factors that contribute to global happiness. Using the World Happiness Report dataset, we visualize how economy, social support, and health influence a country's happiness score.
 
 ## Objective
-To understand Netflix's content strategy by analyzing:
-- The ratio of Movies vs. TV Shows.
-- Content growth over the last decade.
-- Top producing countries and popular genres.
+- Visualize the ranking of the happiest countries.
+- Identify correlations between GDP, Life Expectancy, and Happiness.
+- Compare happiness distributions across different world regions.
 
 ## Dataset
-- **Name**: Netflix Movies and TV Shows
-- **Source**: [Kaggle - Netflix Titles](https://www.kaggle.com/datasets/shivamb/netflix-shows)
-- **Format**: CSV (`netflix_titles.csv`)
+- **Name**: World Happiness Report
+- **Source**: [Kaggle - World Happiness](https://www.kaggle.com/datasets/unsdsn/world-happiness)
+- **Format**: CSV (`world_happiness.csv`)
 
-## Step-by-Step Implementation
-1. **Data Loading**: Using Pandas to read the raw CSV.
-2. **Data Cleaning**: Handling missing values in `director`, `cast`, and `country`. Converting `date_added` to datetime objects.
-3. **Exploratory Analysis**:
-   - Analysis of Content Type distribution.
-   - Time-series analysis of content additions.
-   - Categorical analysis of Genres and Countries.
-4. **Visualization**: Creating charts using Matplotlib and Seaborn.
+## Implementation Steps
+1. **Data Preparation**: Cleaning column names and handling region-specific data.
+2. **Correlation Analysis**: Using heatmaps to find the strongest drivers of happiness.
+3. **Scatter Analysis**: Visualizing the relationship between wealth (GDP) and well-being.
+4. **Regional Insights**: Using Boxplots to see which regions are consistently happier.
 
 ## Key Insights
-- Netflix focuses more on **Movies** than TV Shows (approx. 70/30 split).
-- Significant growth in content addition observed post-2015.
-- The **United States** is the leading content producer, followed by India.
-- **International Movies** and **Dramas** are the most frequent genres.
+- **GDP and Social Support** have the strongest positive correlation with Happiness scores.
+- **Western Europe** and **North America** consistently rank higher in happiness.
+- Sub-Saharan African countries often have lower scores but show interesting outliers in social support.
 
 ## How to Run
 1. Install requirements: `pip install pandas numpy matplotlib seaborn`
-2. Place `netflix_titles.csv` in the `data/` folder.
-3. Run the script: `python notebooks/netflix_eda.py`
+2. Place your CSV in `data/world_happiness.csv`.
+3. Run: `python notebooks/happiness_viz.py`
 
 ## Folder Structure
 ```
-Project_1_EDA_Netflix/
-├── data/           # Raw dataset
-├── notebooks/      # Python implementation scripts
-├── output/         # Saved visualizations
-└── README.md       # Project documentation
+Project_2_Data_Viz_Happiness/
+├── data/           # Raw CSV
+├── notebooks/      # Visualization code
+├── output/         # Visualization images (PNG)
+└── README.md
 ```
+ Eleanor Roosevelt once said, "Happiness is not a goal... it's a by-product of a life well lived." This project quantifies that by-product!
