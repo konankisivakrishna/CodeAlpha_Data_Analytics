@@ -1,42 +1,44 @@
-# Amazon Product Reviews Sentiment Analysis
+# Netflix Content Analysis - Exploratory Data Analysis (EDA)
 
 ## Project Overview
-This project applies **Natural Language Processing (NLP)** techniques to analyze customer sentiment from product reviews. Using Python and the TextBlob library, we extract emotional tone from text and compare it with user ratings.
+This project performs an Exploratory Data Analysis (EDA) on the Netflix Titles dataset to uncover insights about content distribution, trends over time, and regional availability.
 
 ## Objective
-- Clean and preprocess raw text data.
-- Quantify customer sentiment as Positive, Neutral, or Negative.
-- Visualize the distribution of sentiment across hundreds of reviews.
-- Validate if user ratings align with the textual sentiment.
+To understand Netflix's content strategy by analyzing:
+- The ratio of Movies vs. TV Shows.
+- Content growth over the last decade.
+- Top producing countries and popular genres.
 
 ## Dataset
-- **Name**: Amazon Product Reviews
-- **Source**: [Kaggle - Amazon Reviews](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews)
-- **Format**: CSV (`amazon_reviews.csv`)
+- **Name**: Netflix Movies and TV Shows
+- **Source**: [Kaggle - Netflix Titles](https://www.kaggle.com/datasets/shivamb/netflix-shows)
+- **Format**: CSV (`netflix_titles.csv`)
 
-## Implementation Steps
-1. **Text Preprocessing**: Lowercasing, removing special characters, and tokenization.
-2. **Sentiment Scoring**: Calculating Polarity using `TextBlob`.
-3. **Categorization**: Grouping reviews based on their scores.
-4. **Statistical Visualization**: Plotting distributions and boxplots to see the relationship between scores and ratings.
+## Step-by-Step Implementation
+1. **Data Loading**: Using Pandas to read the raw CSV.
+2. **Data Cleaning**: Handling missing values in `director`, `cast`, and `country`. Converting `date_added` to datetime objects.
+3. **Exploratory Analysis**:
+   - Analysis of Content Type distribution.
+   - Time-series analysis of content additions.
+   - Categorical analysis of Genres and Countries.
+4. **Visualization**: Creating charts using Matplotlib and Seaborn.
 
 ## Key Insights
-- High ratings (4 and 5 stars) strongly correlate with positive polarity scores.
-- "Neutral" reviews often contain mixed feedback (e.g., "Good product but late shipping").
-- Polarity histograms usually show a right-skew, indicating that Amazon customers tend to leave positive feedback or "all-or-nothing" extreme reviews.
+- Netflix focuses more on **Movies** than TV Shows (approx. 70/30 split).
+- Significant growth in content addition observed post-2015.
+- The **United States** is the leading content producer, followed by India.
+- **International Movies** and **Dramas** are the most frequent genres.
 
 ## How to Run
-1. Install requirements: `pip install pandas matplotlib seaborn textblob`
-2. Download `nltk` data (optional for simple usage): `python -m textblob.download_corpora`
-3. Place your dataset in `data/amazon_reviews.csv`.
-4. Run: `python notebooks/sentiment_analysis.py`
+1. Install requirements: `pip install pandas numpy matplotlib seaborn`
+2. Place `netflix_titles.csv` in the `data/` folder.
+3. Run the script: `python notebooks/netflix_eda.py`
 
 ## Folder Structure
 ```
-Project_3_Sentiment_Analysis/
-├── data/           # Dataset
-├── notebooks/      # NLP script
-├── output/         # Sentiment plots
-└── README.md
+Project_1_EDA_Netflix/
+├── data/           # Raw dataset
+├── notebooks/      # Python implementation scripts
+├── output/         # Saved visualizations
+└── README.md       # Project documentation
 ```
- "Your most unhappy customers are your greatest source of learning." – Bill Gates. This tool helps you find them!
