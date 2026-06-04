@@ -1,26 +1,30 @@
-# Project Report: Customer Sentiment & Satisfaction Analysis
+# Project Report: Netflix Content Strategy Analysis
 
-## 1. Introduction
-Sentiment analysis is a critical tool for businesses to understand the "voice of the customer." This report summarizes the NLP-driven analysis of Amazon product reviews to gauge sentiment trends.
+## 1. Executive Summary
+This report details the findings of an Exploratory Data Analysis conducted on the Netflix library. The study identifies key trends in content acquisition and highlights the platform's global expansion strategy.
 
 ## 2. Methodology
-- **Library**: `TextBlob` for rule-based sentiment analysis.
-- **Metric**: Polarity Score (ranging from -1.0 to 1.0).
-- **Process**: Data Cleaning -> Sentiment Scoring -> Labeling -> Visualization.
+- **Tooling**: Python 3.x, Pandas for data manipulation, Seaborn/Matplotlib for visualization.
+- **Process**: Data ingestion -> Cleaning (handling nulls) -> Feature Engineering (date extraction) -> Visualization.
 
-## 3. Results & Discussion
-### 3.1 Sentiment Volume
-The majority of reviewed products exhibit a positive sentiment, suggesting high satisfaction levels within the sampled dataset.
+## 3. Data Cleaning Details
+- Missing `country` entries were labeled as 'Unknown'.
+- Missing `director` and `cast` were filled with placeholders.
+- Date formats were standardized for temporal analysis.
 
-### 3.2 Score to Rating Alignment
-A clear trend was observed where reviews with scores > 0.5 were almost exclusively 5-star ratings. However, 1-star ratings occasionally had neutral scores due to "sarcastic" or "curt" feedback, highlighting the limitations of simple rule-based NLP.
+## 4. Analysis and Findings
+### 4.1 Content Balance
+A plurality of Netflix content consists of Feature Films. However, TV Shows show a higher retention potential and are growing steadily in the library.
 
-### 3.3 Text Distribution
-The polarity histogram shows a peak at 0.0 (neutral) and another at 0.7-0.8 (highly positive), common in e-commerce datasets.
+### 4.2 Content Inflow
+Between 2016 and 2019, Netflix aggressively scaled its content library, with 2019 being a peak year for additions.
 
-## 4. Conclusion
-Automated sentiment analysis provides a fast and scalable way to monitor brand reputation. For future improvements, moving towards Deep Learning models (like BERT) could better handle nuance and sarcasm in customer feedback.
+### 4.3 Geographical Insights
+The USA, India, and the UK are the primary contributors. Exploring emerging markets (e.g., South Korea) shows high engagement in specific genres.
+
+## 5. Conclusion & Recommendations
+Netflix should continue investing in International Content, as "International Movies" is one of the top categories. Diversifying genres in under-represented countries could further boost global sub-counts.
 
 ---
 *Internship: CodeAlpha Data Analytics*
-*Project: Task 3 - Sentiment Analysis*
+*Project: Task 1 - EDA*
