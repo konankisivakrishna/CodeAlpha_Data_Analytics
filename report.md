@@ -1,30 +1,24 @@
-# Project Report: Netflix Content Strategy Analysis
+# Project Report: Global Well-being & Happiness Factors
 
-## 1. Executive Summary
-This report details the findings of an Exploratory Data Analysis conducted on the Netflix library. The study identifies key trends in content acquisition and highlights the platform's global expansion strategy.
+## 1. Introduction
+This report examines the 2019-2021 World Happiness data. The goal is to identify which socio-economic factors are most critical to a nation's perceived quality of life.
 
-## 2. Methodology
-- **Tooling**: Python 3.x, Pandas for data manipulation, Seaborn/Matplotlib for visualization.
-- **Process**: Data ingestion -> Cleaning (handling nulls) -> Feature Engineering (date extraction) -> Visualization.
+## 2. Visualization Findings
+### 2.1 The Wealth Gap
+The scatter plots clearly indicate a logarithmic relationship between GDP per capita and Happiness. Beyond a certain economic threshold, social factors start to play a larger role.
 
-## 3. Data Cleaning Details
-- Missing `country` entries were labeled as 'Unknown'.
-- Missing `director` and `cast` were filled with placeholders.
-- Date formats were standardized for temporal analysis.
+### 2.2 Correlation Matrix
+Health and Social Support show a correlation coefficient of >0.7 with the Happiness Score, suggesting that infrastructure for health is just as important as economic output.
 
-## 4. Analysis and Findings
-### 4.1 Content Balance
-A plurality of Netflix content consists of Feature Films. However, TV Shows show a higher retention potential and are growing steadily in the library.
+### 2.3 Regional Variability
+Western Europe exhibits the lowest variance in happiness scores, indicating stable quality of life across the region. In contrast, the Middle East shows high variance due to varying political stability.
 
-### 4.2 Content Inflow
-Between 2016 and 2019, Netflix aggressively scaled its content library, with 2019 being a peak year for additions.
+## 3. Technical Implementation
+The project utilized `Seaborn` for its high-level interface for statistical graphics, ensuring that the visualizations are not only accurate but also publication-quality.
 
-### 4.3 Geographical Insights
-The USA, India, and the UK are the primary contributors. Exploring emerging markets (e.g., South Korea) shows high engagement in specific genres.
-
-## 5. Conclusion & Recommendations
-Netflix should continue investing in International Content, as "International Movies" is one of the top categories. Diversifying genres in under-represented countries could further boost global sub-counts.
+## 4. Conclusion
+While money (GDP) is a significant predictor of happiness, social support systems are the backbone of high-ranking nations. Policy-makers should focus on both economic growth and social safety nets.
 
 ---
 *Internship: CodeAlpha Data Analytics*
-*Project: Task 1 - EDA*
+*Project: Task 2 - Data Visualization*
