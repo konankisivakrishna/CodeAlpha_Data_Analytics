@@ -1,24 +1,26 @@
-# Project Report: Global Well-being & Happiness Factors
+# Project Report: Customer Sentiment & Satisfaction Analysis
 
 ## 1. Introduction
-This report examines the 2019-2021 World Happiness data. The goal is to identify which socio-economic factors are most critical to a nation's perceived quality of life.
+Sentiment analysis is a critical tool for businesses to understand the "voice of the customer." This report summarizes the NLP-driven analysis of Amazon product reviews to gauge sentiment trends.
 
-## 2. Visualization Findings
-### 2.1 The Wealth Gap
-The scatter plots clearly indicate a logarithmic relationship between GDP per capita and Happiness. Beyond a certain economic threshold, social factors start to play a larger role.
+## 2. Methodology
+- **Library**: `TextBlob` for rule-based sentiment analysis.
+- **Metric**: Polarity Score (ranging from -1.0 to 1.0).
+- **Process**: Data Cleaning -> Sentiment Scoring -> Labeling -> Visualization.
 
-### 2.2 Correlation Matrix
-Health and Social Support show a correlation coefficient of >0.7 with the Happiness Score, suggesting that infrastructure for health is just as important as economic output.
+## 3. Results & Discussion
+### 3.1 Sentiment Volume
+The majority of reviewed products exhibit a positive sentiment, suggesting high satisfaction levels within the sampled dataset.
 
-### 2.3 Regional Variability
-Western Europe exhibits the lowest variance in happiness scores, indicating stable quality of life across the region. In contrast, the Middle East shows high variance due to varying political stability.
+### 3.2 Score to Rating Alignment
+A clear trend was observed where reviews with scores > 0.5 were almost exclusively 5-star ratings. However, 1-star ratings occasionally had neutral scores due to "sarcastic" or "curt" feedback, highlighting the limitations of simple rule-based NLP.
 
-## 3. Technical Implementation
-The project utilized `Seaborn` for its high-level interface for statistical graphics, ensuring that the visualizations are not only accurate but also publication-quality.
+### 3.3 Text Distribution
+The polarity histogram shows a peak at 0.0 (neutral) and another at 0.7-0.8 (highly positive), common in e-commerce datasets.
 
 ## 4. Conclusion
-While money (GDP) is a significant predictor of happiness, social support systems are the backbone of high-ranking nations. Policy-makers should focus on both economic growth and social safety nets.
+Automated sentiment analysis provides a fast and scalable way to monitor brand reputation. For future improvements, moving towards Deep Learning models (like BERT) could better handle nuance and sarcasm in customer feedback.
 
 ---
 *Internship: CodeAlpha Data Analytics*
-*Project: Task 2 - Data Visualization*
+*Project: Task 3 - Sentiment Analysis*

@@ -1,40 +1,42 @@
-# World Happiness Data Visualization
+# Amazon Product Reviews Sentiment Analysis
 
 ## Project Overview
-This project focuses on **Data Visualization** to explore the factors that contribute to global happiness. Using the World Happiness Report dataset, we visualize how economy, social support, and health influence a country's happiness score.
+This project applies **Natural Language Processing (NLP)** techniques to analyze customer sentiment from product reviews. Using Python and the TextBlob library, we extract emotional tone from text and compare it with user ratings.
 
 ## Objective
-- Visualize the ranking of the happiest countries.
-- Identify correlations between GDP, Life Expectancy, and Happiness.
-- Compare happiness distributions across different world regions.
+- Clean and preprocess raw text data.
+- Quantify customer sentiment as Positive, Neutral, or Negative.
+- Visualize the distribution of sentiment across hundreds of reviews.
+- Validate if user ratings align with the textual sentiment.
 
 ## Dataset
-- **Name**: World Happiness Report
-- **Source**: [Kaggle - World Happiness](https://www.kaggle.com/datasets/unsdsn/world-happiness)
-- **Format**: CSV (`world_happiness.csv`)
+- **Name**: Amazon Product Reviews
+- **Source**: [Kaggle - Amazon Reviews](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews)
+- **Format**: CSV (`amazon_reviews.csv`)
 
 ## Implementation Steps
-1. **Data Preparation**: Cleaning column names and handling region-specific data.
-2. **Correlation Analysis**: Using heatmaps to find the strongest drivers of happiness.
-3. **Scatter Analysis**: Visualizing the relationship between wealth (GDP) and well-being.
-4. **Regional Insights**: Using Boxplots to see which regions are consistently happier.
+1. **Text Preprocessing**: Lowercasing, removing special characters, and tokenization.
+2. **Sentiment Scoring**: Calculating Polarity using `TextBlob`.
+3. **Categorization**: Grouping reviews based on their scores.
+4. **Statistical Visualization**: Plotting distributions and boxplots to see the relationship between scores and ratings.
 
 ## Key Insights
-- **GDP and Social Support** have the strongest positive correlation with Happiness scores.
-- **Western Europe** and **North America** consistently rank higher in happiness.
-- Sub-Saharan African countries often have lower scores but show interesting outliers in social support.
+- High ratings (4 and 5 stars) strongly correlate with positive polarity scores.
+- "Neutral" reviews often contain mixed feedback (e.g., "Good product but late shipping").
+- Polarity histograms usually show a right-skew, indicating that Amazon customers tend to leave positive feedback or "all-or-nothing" extreme reviews.
 
 ## How to Run
-1. Install requirements: `pip install pandas numpy matplotlib seaborn`
-2. Place your CSV in `data/world_happiness.csv`.
-3. Run: `python notebooks/happiness_viz.py`
+1. Install requirements: `pip install pandas matplotlib seaborn textblob`
+2. Download `nltk` data (optional for simple usage): `python -m textblob.download_corpora`
+3. Place your dataset in `data/amazon_reviews.csv`.
+4. Run: `python notebooks/sentiment_analysis.py`
 
 ## Folder Structure
 ```
-Project_2_Data_Viz_Happiness/
-├── data/           # Raw CSV
-├── notebooks/      # Visualization code
-├── output/         # Visualization images (PNG)
+Project_3_Sentiment_Analysis/
+├── data/           # Dataset
+├── notebooks/      # NLP script
+├── output/         # Sentiment plots
 └── README.md
 ```
- Eleanor Roosevelt once said, "Happiness is not a goal... it's a by-product of a life well lived." This project quantifies that by-product!
+ "Your most unhappy customers are your greatest source of learning." – Bill Gates. This tool helps you find them!
